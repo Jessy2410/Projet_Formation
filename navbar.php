@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: formCOIN.php");
     exit();
 }
-
+// test
 // Votre code pour la page Home commence ici
 ?>
 

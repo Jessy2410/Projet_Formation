@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:rgb(233, 232, 232);
+}
+.container-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement régulier */
+    justify-content: space-between; /* Écarte les éléments autant que possible */
+    align-items: center; /* Centre verticalement */
+    margin: auto;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    aspect-ratio: 3/1;
+    scrollbar-color: white rgb(15, 27, 77);
+    transition: all 0.3s ease-in-out;
+}
+
+.container-elements {
+    /* Cacher la scrollbar sans désactiver le défilement */
+    scrollbar-width: none; /* Pour Firefox */
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  }
+  
+  /* Pour Chrome, Edge, Safari */
+  .container-elements::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Mode recherche : Si 1 ou 2 éléments seulement, recentrer */
+.container-elements.few-results {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Force une disposition verticale */
+}
+
+.card-img-top {
+    border-radius: 35px;
+    padding: 20px;
+}
+.card {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    width: 385px;
+    transition: width 0.3s ease-in-out;
+}
+.card-body {
+    padding: 25px;
+    margin-top: -15px;
+}
+.btn-primary {
+    border-radius: 50px;
+    width: 120px;
+}
+.btn-primary:hover {
+    background-color: black;
+}
+
+h3, h5 {
+    color: rgb(0, 91, 228);
+}
+
+.form-control{
+    width: 900px;
+}
+
+.mb-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 278px; /* Quand la sidebar est ouverte */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.close ~ .catalogue-container {
+    margin-left: 100px; /* Quand la sidebar est fermée */
+}
+
+.sidebar.close ~ .catalogue-container .card{
+    width: 417px;
+}
+
+.btn-arrow{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.btn-arrow img{
+    width: 50px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 9px;
+}

@@ -1,0 +1,468 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.nav {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le logo et les onglets */
+    align-items: center; /* Centre verticalement le contenu */
+    width: 100%;
+    height: 75px; /* Hauteur de la navbar */
+    background: rgb(255, 255, 255); /* Fond blanc */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 0; /* Espacement à gauche et à droite de la navbar */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    flex-shrink: 0; /* Empêche la navbar de se réduire */
+    border-bottom: solid 2px rgb(245, 245, 245);
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo */
+    margin-left: 15px;
+}
+
+.onglets {
+    display: flex;
+    justify-content: flex-end; /* Aligne les onglets à droite */
+    align-items: center; /* Centre verticalement les onglets */
+    flex-grow: 1; /* Permet aux onglets de prendre l'espace restant */
+    margin-left: 0px; /* Ajoute un petit espace entre le logo et les onglets */
+    height: 100%;
+}
+
+.onglets .link {
+    color: black; /* Texte noir pour les liens */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s ease-in-out;
+}
+
+.onglets .link:hover {
+    color: #1c294c; /* Changement de couleur au survol */
+    border-bottom: solid 3px #1c294c;
+}
+
+.onglets .dropdown .link-dropdown {
+    color: black; /* Texte noir pour les liens */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s ease-in-out;
+}
+
+.onglets .dropdown .link-dropdown:hover {
+    color: #1c294c; /* Changement de couleur au survol */
+    border-bottom: solid 3px #1c294c;
+}
+
+
+.onglets .link-connect{
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    color: black; /* Texte noir pour les liens */
+    padding-left: 27px;
+    padding-right: 27px;
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s;
+    border-left: solid 3px #e3e3e3;
+    
+}
+
+.onglets .link-connect:hover {
+    color: #ffffff; /* Changement de couleur au survol */
+    background-color: #1c294c;
+    cursor: pointer;
+}
+
+.onglets .link-connect i{
+    font-size: 35px;
+    transition: .1s;
+}
+
+.onglets .link-connect i:hover{
+    cursor: pointer;
+}
+
+
+
+/* Popup */
+.popup {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 75px; /* Juste en dessous de la navbar */
+    right: 10px; /* Aligné à droite */
+    background: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.popup-icon {
+    font-size: 50px;
+    margin-bottom: 0px;
+    color: #1c294c;
+}
+
+.popup-button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.popup-button:hover {
+    background: #1c294c;
+    color: white;
+}
+
+.popup a{
+    text-decoration: none;
+}
+
+/* Styles pour le dropdown */
+.dropdown {
+    position: relative; /* Positionne le dropdown par rapport à son parent */
+    display: inline-block; /* Assure que le parent prend juste la taille du contenu */
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none; /* Masquer le dropdown par défaut */
+    position: absolute; /* Position absolue par rapport au parent */
+    top: 110%; /* Aligne le menu juste sous l'onglet */
+    left: 0; /* Aligne avec le bord gauche du parent */
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 200px; /* Largeur minimale du menu */
+    padding: 10px 0;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #1c294c;
+    color: #ffffff;
+}
+
+/* Affiche le menu dropdown lorsque l'utilisateur survole */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styles supplémentaires pour la navbar */
+.onglets {
+    display: flex; /* Alignement en ligne des onglets */
+    align-items: center;
+    position: relative; /* Nécessaire pour le positionnement des enfants */
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: rgb(255, 255, 255);
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+.sidebar.close{
+  width: 78px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logo-details i{
+  font-size: 30px;
+  color: #1e1e1e;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+.sidebar .logo-details .logo_name{
+  font-size: 22px;
+  color: #1e1e1e;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+.sidebar.close .logo-details .logo_name{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links{
+  position: relative;
+  top: 60px;
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+.sidebar.close .nav-links{
+  overflow: visible;
+}
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+
+
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  transition: all 0.2s ease;
+  border-right: solid 3px transparent;
+}
+.sidebar .nav-links li:hover{
+  background: #f4f3f3;
+  border-right: solid 3px #1c294c;
+}
+.sidebar .nav-links li .iocn-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar.close .nav-links li .iocn-link{
+  display: block
+}
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #1e1e1e;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sidebar .nav-links li a .link_name{
+  font-size: 18px;
+  font-weight: 400;
+  color: #1e1e1e;
+  transition: all 0.4s ease;
+}
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #f4f3f3;
+  display: none;
+}
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+.sidebar .nav-links li .sub-menu a{
+  color: #1e1e1e;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 106%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li .sub-menu .link_name{
+  display: none;
+  padding-right: 45px;
+}
+.sidebar.close .nav-links li .sub-menu .link_name{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+.sidebar .nav-links li .sub-menu.blank{
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.one {
+  width: 80%;
+  margin-left: 10%;
+  background-color: black;
+  height: 400px;
+}
+
+.sidebar .profile-details{
+  position: fixed;
+  bottom: 0;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  padding: 12px 0;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details{
+  background: none;
+}
+.sidebar.close .profile-details{
+  width: 78px;
+}
+.sidebar .profile-details .profile-content{
+  display: flex;
+  align-items: center;
+}
+.sidebar .profile-details img{
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details img{
+  padding: 10px;
+}
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job{
+  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job{
+  display: none;
+}
+.sidebar .profile-details .job{
+  font-size: 12px;
+}
+
+.sidebar.close ~ .home-section{
+  left: 78px;
+  width: calc(100% - 78px);
+}
+.home-section .home-content{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.bx-menu{
+  color: #11101d;
+  font-size: 35px;
+}
+.bx-menu{
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .sidebar.close .nav-links li .sub-menu{
+    display: none;
+  }
+}
+
+
+#menu-icon {
+    font-size: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #11101d;
+}
+
+#menu-icon.cross {
+    transform: rotate(90deg); /* Transformation pour indiquer l'état ouvert */
+    color: #1c294c; /* Changer la couleur en croix */
+}
+
+/* Mode Sombre */
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+.dark-mode .card {
+    background-color: #323232;
+}

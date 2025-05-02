@@ -1,0 +1,195 @@
+.nav {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le logo et les onglets */
+    align-items: center; /* Centre verticalement le contenu */
+    width: 100%;
+    height: 75px; /* Hauteur de la navbar */
+    background: rgb(255, 255, 255); /* Fond blanc */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.188); /* Ombre subtile en bas */
+    padding: 0 0; /* Espacement à gauche et à droite de la navbar */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    flex-shrink: 0; /* Empêche la navbar de se réduire */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo */
+    margin-left: 15px;
+}
+
+.onglets {
+    display: flex;
+    justify-content: flex-end; /* Aligne les onglets à droite */
+    align-items: center; /* Centre verticalement les onglets */
+    flex-grow: 1; /* Permet aux onglets de prendre l'espace restant */
+    margin-left: 0px; /* Ajoute un petit espace entre le logo et les onglets */
+    height: 100%;
+}
+
+.onglets .link {
+    color: black; /* Texte noir pour les liens */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s ease-in-out;
+}
+
+.onglets .link:hover {
+    color: #644cff; /* Changement de couleur au survol */
+    border-bottom: solid 3px #644cff;
+}
+
+.onglets .dropdown .link-dropdown {
+    color: black; /* Texte noir pour les liens */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s ease-in-out;
+}
+
+.onglets .dropdown .link-dropdown:hover {
+    color: #644cff; /* Changement de couleur au survol */
+    border-bottom: solid 3px #644cff;
+}
+
+
+.onglets .link-connect{
+    color: black; /* Texte noir pour les liens */
+    padding-left: 27px;
+    padding-right: 27px;
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-left: 50px; /* Espacement entre les liens */
+    font-size: 16px; /* Taille des liens */
+    height: 98%; /* Hauteur du lien égale à celle de la navbar */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    align-items: center; /* Centre le texte verticalement */
+    font-size: 20px;
+    transition: .1s;
+    border-left: solid 3px #e3e3e3;
+    
+}
+
+.onglets .link-connect:hover {
+    color: #ffffff; /* Changement de couleur au survol */
+    background-color: #644cff;
+    border-bottom: #644cff 2px solid;
+    border-top: #644cff 2px solid;
+    cursor: pointer;
+}
+
+.onglets .link-connect i{
+    font-size: 35px;
+    transition: .1s;
+}
+
+.onglets .link-connect i:hover{
+    cursor: pointer;
+}
+
+
+
+/* Popup */
+.popup {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 75px; /* Juste en dessous de la navbar */
+    right: 10px; /* Aligné à droite */
+    background: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.popup-icon {
+    font-size: 50px;
+    margin-bottom: 0px;
+    color: #644cff;
+}
+
+.popup-button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.popup-button:hover {
+    background: #644cff;
+    color: white;
+}
+
+.popup a{
+    text-decoration: none;
+}
+
+/* Styles pour le dropdown */
+.dropdown {
+    position: relative; /* Positionne le dropdown par rapport à son parent */
+    display: inline-block; /* Assure que le parent prend juste la taille du contenu */
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none; /* Masquer le dropdown par défaut */
+    position: absolute; /* Position absolue par rapport au parent */
+    top: 110%; /* Aligne le menu juste sous l'onglet */
+    left: 0; /* Aligne avec le bord gauche du parent */
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 200px; /* Largeur minimale du menu */
+    padding: 10px 0;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #644cff;
+    color: #ffffff;
+}
+
+/* Affiche le menu dropdown lorsque l'utilisateur survole */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styles supplémentaires pour la navbar */
+.onglets {
+    display: flex; /* Alignement en ligne des onglets */
+    align-items: center;
+    position: relative; /* Nécessaire pour le positionnement des enfants */
+}
+

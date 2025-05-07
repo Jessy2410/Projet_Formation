@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire Inscription/Connexion</title>
-    <link rel="stylesheet" href="styleForm.css">
+    <link rel="stylesheet" href="css\styleForm.css">
 </head>
 <body>
     <div class="form-container">

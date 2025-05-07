@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details formations</title>
-    <link rel="stylesheet" href="styleDetails.css">
+    <link rel="stylesheet" href="css\styleDetails.css">
 </head>
 <body>
 

@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'connect.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +27,11 @@
         <p id="file-name">Aucun fichier choisi</p>
         <input type="file" name="file" id="file" accept="application/pdf" required>
         <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
+
+        <label for="heures">Nombre d'heures de formation :</label>
+        <input type="number" name="heures" id="heures" min="1" placeholder="Ex: 3" required>
+
+
         <button type="submit">Uploader</button>
     </form>
     

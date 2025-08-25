@@ -83,3 +83,11 @@ button:focus {
     outline: 2px solid #fff;
     outline-offset: 4px;
 }
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+}

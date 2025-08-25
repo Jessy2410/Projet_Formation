@@ -1,5 +1,6 @@
 <?php
-include('connect.php');
+include 'connect.php';
+
 
 if (isset($_POST['connecté'])) {
     // Récupération des données du formulaire

@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
         </div>
         <a class="link" href="#section-catalogue">Catalogue</a>
-        <a class="link" href="">Mes formations</a>
+        <a class="link" href="mon_compte.php">Mes formations</a>
         <a class="link-connect" data-name="userIcon">
             <?php echo $_SESSION['prenom']; echo " "; echo $_SESSION['nom']; ?>
         </a>

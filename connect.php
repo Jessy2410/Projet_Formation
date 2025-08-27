@@ -13,9 +13,6 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Gestion des erreurs
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Mode de récupération par défaut
 
-    // Affiche un message de confirmation (à supprimer en production)
-    // echo "Connexion réussie !";
-
 } catch (PDOException $e) {
     // Gestion des erreurs en cas d'échec de connexion
     die("Erreur de connexion à la base de données : " . $e->getMessage());

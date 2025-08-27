@@ -36,7 +36,7 @@
 
         <!-- Image Cache -->
         <div class="image-slider" id="image-slider">
-            <img src="https://stephenson-formation.fr/wp-content/uploads/2023/07/J.F.-TOSTIVINT_DG-Stephenson-Formation-1024x768.jpeg" alt="Image">
+            <img src="images/logoP1.3.png" alt="Image">
             <button id="toggle-form">S'inscrire ?</button>
         </div>
     </div>
